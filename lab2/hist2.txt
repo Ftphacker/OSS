@@ -1,0 +1,78 @@
+    1  history 
+    2  cd
+    3  mkdir test
+    4  cd test
+    5  ls
+    6  whoaim
+    7  whoiam
+    8  whoami
+    9  nano file
+   10  ls
+   11  chmod file
+   12  ls -l
+   13  chmod 000 file
+   14  ls
+   15  cat file
+   16  nano file
+   17  ls
+   18  "ddd">file
+   19  "test">file
+   20  less file
+   21  ls -l
+   22  chmod 200 file
+   23  ll
+   24  "test">file
+   25  less file
+   26  cat file
+   27  chmod g+r file
+   28  ll
+   29  cat file
+   30  chmod u+r file
+   31  ll
+   32  cat file
+   33  less file
+   34  nano file
+   35  echo "test">file
+   36  cat file
+   37  chmod 000 file
+   38  ls
+   39  ll
+   40  chmod 200 file
+   41  ll
+   42  chmod g+r file
+   43  chmod u+r file
+   44  ll
+   45  cat file
+   46  mkdir dir
+   47  touch dir/new_file | echo "file 2" > dir/new_file
+   48  ll dir
+   49  cat dir/new_file 
+   50  chmod u-x dir
+   51  ll
+   52  cat dir/new_file 
+   53  rm dir/new_file
+   54  chown root file
+   55  chown ochko:root file
+   56  chgrp root file
+   57  umask -p
+   58  umask ll
+   59  ll
+   60  umask 066
+   61  touch file1
+   62  ll
+   63  umask 000 | touch file2
+   64  ll
+   65  touch file2
+   66  ;ll
+   67  ll
+   68  rm file2
+   69  umask 000
+   70  touch file2
+   71  ll
+   72  ls
+   73  cd ..
+   74  cd Desktop/Bos/lab2/
+   75  ls
+   76  touch hist2.txt
+   77  touch ls2.txt
+   78  history>hist2.txt
