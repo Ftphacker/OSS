@@ -1,0 +1,97 @@
+    1  ls
+    2  history 
+    3  mkdir oss
+    4  cd oss
+    5  mkdir lab3
+    6  cd lab3
+    7  ls
+    8  ll
+    9  find / -name "*pass*" -type fd
+   10  find / -name "*pass*" -type f
+   11  find / -name "*pass*" -type f,d 
+   12  find / -name "*pass*" -type f -type d 
+   13  find / -name "*pass*" -type f> test1
+   14  cat test1 
+   15  find / -name "*pass*">test
+   16  cat test
+   17  clean
+   18  clear
+   19  rm test
+   20  find / -name "*pass*">test
+   21  cat test
+   22  less test
+   23  clear
+   24  find / -iname "*pass*"
+   25  find / -type f -name "pass" -maxdepth 1
+   26  find / -name "pass" -maxdepth 1
+   27  find / -name "*pass*" -maxdepth 1
+   28  find / -maxdepth 1 -name "*pass*"
+   29  find / -maxdepth 2 -name "*pass*"
+   30  find /home -maxdepth 1 -name "*.bin"
+   31  find /home -name "*.bin"
+   32  find / -type f -name "*.bak"
+   33  find / -type f -name "*.bak" -delete
+   34  find / -type f -name "*.bak$" -delete
+   35  find / -type f -name "*.txt"
+   36  find / -type f -name "*.txt$"
+   37  find / -type f -name "*.txt" "*.sh"
+   38  find / -type f -name "*.txt" -name "*.sh"
+   39  find / -type f -name "*.txt" -o "*.sh"
+   40  find / -type f -name "*.txt" -name "*.sh"
+   41  find -type f -regex ".*.(txt|sh)$"
+   42  find -type f -regex ".*.(txt|sh)"
+   43  find / -type f -regex ".*.(txt|sh)"
+   44  ll
+   45  find -type f | ll 
+   46  find -type f | ll | cut -d' ' f2,3,4,5,9 
+   47  find -type f | ll | cut -d'' f2,3,4,5,9 
+   48  find -type f | ll | cut -d' ' -f2,3,4,5,9 
+   49  find . -maxdepth 1 -type f -printf '%f %u %g %n %s\n'
+   50  find -type d -empty
+   51  find -maxdepth 1 -type d -empty
+   52  find -maxdepth 1 -type d -empty -delete
+   53  find -maxdepth 1 -type f -empty -delete
+   54  find -maxdepth 1 -type f -links +0
+   55  history
+   56  find /etc -maxdepth 1 -user root
+   57  find /etc -maxdepth 1 -user ! root
+   58  find /etc -maxdepth 1 ! -user root
+   59  find /etc -maxdepth 1 not -user root
+   60  find /etc -maxdepth 1 -not -user root
+   61  find / -type f ! -name "*.sh"
+   62  find / -type f -links +2
+   63  find /usr/bin -type f -atime 90
+   64  find (/usr/bin /usr/share) -type f -mtime 10
+   65  find /usr/share -type f -mtime 10
+   66  find /usr/bin -type f -mtime 10
+   67  find /tmp -type f -mtime +14 -delete
+   68  find /usr/bin -type f -flag suid/sgid
+   69  find /usr/bin -type f -perm -u+s -o -perm -g+s
+   70  history
+   71  find / -type f -name "*.txt" | xargs -L1
+   72  find / -type f -name "*.txt" | xargs -L1 wc
+   73  find / -type f -name "*.txt" | xargs -L1 wc -l
+   74  find / -type f -name "*.txt" | xargs wc -l
+   75  find / -type f -name "*.txt" | wc -l
+   76  find / -type f -name "*.txt" | xargs wc -l
+   77  find / -type d -name "*.svn"
+   78  find / -type d -name "*.svn" -exec ls {} \; -delete 
+   79  find / -type f -name "*.sh" -exec chmod{} u+x \; 
+   80  find / -type f -name "*.sh" -exec chmod +x {} \; 
+   81  find /etc -type f -name "*.conf" -exec du -c {} \; 
+   82  find /etc -type f -name "*.conf" | xargs du -c
+   83  history
+   84  grep -i 'ERROR' /var/log/messages
+   85  grep -c -i -v 'ERROR' /var/log/messages
+   86  grep -x 'ERROR' /var/log/messages
+   87  grep -c 'wheel' /etc/group
+   88  grep -r '#!bin/bash'
+   89  grep -A10 -r '#!bin/bash'
+   90  grep -x "echo" -r --color --include=*.sh.
+   91  nano test.sh
+   92  grep -x "echo" -r --color --include=*.sh.
+   93  grep "echo" -r --color --include=*.sh.
+   94  grep "echo" -r --color --include=*.sh
+   95  grep "echo" -n -r --color --include=*.sh
+   96  ls
+   97  history>history_lab3.txt
