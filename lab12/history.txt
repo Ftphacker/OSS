@@ -1,0 +1,53 @@
+    1  cd ..
+    2  cd lab12
+    3  ls
+    4  ldd /bin/ls | grep selinux
+    5  ls -l /etc/selinux/
+    6  ls -l /etc/selinux/targeted/
+    7  id -Z
+    8  ls -Z /etc/passwd /etc/group /etc/shadow
+    9  ls -Z /etc/login.defs /etc/sudoers
+   10  ls -Z /usr/bin/passwd 
+   11  ls -Z /usr/sbin/useradd
+   12  getfattr -n security.selinux /etc/passwd
+   13  ps Zaux
+   14  ls /proc/$$/attr
+   15  ps Z $(pgrep passwd)
+   16  netstat -tnlpZ
+   17  sestatus 
+   18  getenforce
+   19  cat /sys/fs/selinux/enforce
+   20  getsebool -a | grep httpd
+   21  seinfo 
+   22  seinfo -cfile -x
+   23  seinfo --class | grep file
+   24  seinfo --class file -x
+   25  seinfo --common file -x
+   26  seinfo | grep 'Policy Version'
+   27  seinfo -c file -x
+   28  seinfo -c dir -x
+   29  seinfo --common file -x
+   30  grep 'httpd_.*_t' /etc/selinux/targeted/contexts/files/file_contexts
+   31  ls
+   32  semanage fcontext -l
+   33  sudo semanage fcontext -l
+   34  nano test.txt
+   35  nano test
+   36  nano test2
+   37  ls -Z test_file
+   38  ls -Z test
+   39  chcon -t httpd_sys_content_t test
+   40  ls -Z
+   41  chcon --reference test test2 
+   42  ls -Z
+   43  sudo semanage fcontext -l
+   44  sudo semanage fcontext -a -t sshd_key_t '/data/keys/*.*'
+   45  sudo restorecon -r /data/keys
+   46  sesearch -T -s httpd_t -t var_log_t
+   47  sesearch -T -s httpd_t -t tmp_t
+   48  sesearch --allow --source passwd_t --target shadow_t --class file
+   49  sesearch -A -s passwd_t -t passwd_exec_t -c file
+   50  sesearch -A -s unconfined_t -t passwd_exec_t -c file
+   51  sesearch -A -s unconfined_t -t passwd_t -c process
+   52  sesearch --type_trans -s unconfined_t -t passwd_exec_t
+   53  history>history.txt
