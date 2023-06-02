@@ -1,0 +1,19 @@
+    1  cd ..
+    2  cd lab13
+    3  ls
+    4  uname -r
+    5  rpmdev-setuptree
+    6  yumdownloader --source kernel
+    7  rpm -i kernel-3.10.0-514.16.1.el7.centos.plus.src.rpm
+    8  ls rpmbuild/SPECS/
+    9   ls rpmbuild/SPECS/kernel.spec
+   10  ls rpmbuild/SOURCES/
+   11  rpmbuild -bs ~/rpmbuild/SPECS/kernel.spec
+   12  ls ~/rpmbuild/SRPMS/
+   13  yum-builddep /home/defanov/rpmbuild/SRPMS/kernel-3.10.0-514.16.1.el7.
+   14  yum-builddep /home/defanov/rpmbuild/SRPMS/kernel-3.10.0-514.16.1.el7.centos.plus.src.rpm
+   15  sudo yum-builddep /home/defanov/rpmbuild/SRPMS/kernel-3.10.0-514.16.1.el7.centos.plus.src.rpm
+   16  rpmbuild -bp --target=$(uname -m) rpmbuild/SPECS/kernel.spec
+   17  cd rpmbuild/BUILD/kernel*/linux*
+   18  ls ~/rpmbuild/BUILD/kernel-3.10.0-514.16.1.el7/linux-3.10.0-514.16.1.el7.centos.plus.efanov.x86_64/
+   19  history>history.txt
