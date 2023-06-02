@@ -1,0 +1,137 @@
+    1  ls
+    2  cd oss
+    3  ls
+    4  cd lab4
+    5  ls
+    6  touch hello.sh
+    7  ls
+    8  vim hello.sh 
+    9  rm hello.sh 
+   10  touch hello.sh
+   11  vim hello.sh 
+   12  bash hello.sh 
+   13  chmod +x hello.sh
+   14  ./hello.sh 
+   15  hello.sh
+   16  ls
+   17  cd ~
+   18  ls
+   19  mkdir bin
+   20  cd bin
+   21  cd ..
+   22  cp oss/lab4/hello.sh bin/
+   23  cd oss/lab4
+   24  hello.sh
+   25  mkdir ~/scripts
+   26  cd ~/scripts/
+   27  apt-get install git
+   28  apt install git
+   29  install git
+   30  sudo yum install git
+   31  git init
+   32  touch README
+   33  vim README 
+   34  git config --global user.name "Ftphacker"
+   35  git config --global user.email "xramow.vova2015@yandex.ru"
+   36  git add README 
+   37  git commit -m 'Added Readme' README
+   38  git push 
+   39  ls -al ~/.ssh
+   40  shh-keygen -t ed25519 -C "xramow.vova2015@yandex.ru"
+   41  ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+   42  ssh-keygen -t rsa -b 4096 -C "xramow.vova2015@yandex.ru"
+   43  eval "$(ssh-agent -s)"
+   44  ssh-add ~/.ssh/id_ed25519
+   45  ssh-add ~/.ssh/id_rsa
+   46  clip < ~/.ssh/id_rsa.pub 
+   47  cat ~/.ssh/id_ed25519.pub
+   48  cat ~/.ssh/id_rsa.pub 
+   49  ls
+   50  cd ..
+   51  mkdir git
+   52  ls
+   53  cd git
+   54  git clone https://github.com/Ftphacker/OSS
+   55  ls
+   56  git add -A
+   57  cd OSS
+   58  git add -A
+   59  git commit -m "New folder script"
+   60  git push origin master
+   61  git pull https://github.com/Ftphacker/OSS master
+   62  git pull https://github.com/Ftphacker/OSS.git master
+   63  ls
+   64  cd ..
+   65  git add -A
+   66  cd OSS
+   67  ll
+   68  git add -A
+   69  git commit -m "New folder script"
+   70  git push
+   71  git pull
+   72  git push
+   73  git push https://github.com/Ftphacker/OSS
+   74  git config --list 
+   75  git init
+   76  cd ..
+   77  git init
+   78  cd OSS/
+   79  git init
+   80  git add .
+   81  git remote add origin https://github.com/Ftphacker/OSS
+   82  git pull origin master
+   83  git push --all
+   84  yum install libcanberra-gtk-module 
+   85  sudo yum install libcanberra-gtk-module 
+   86  sudo yum install canberra-gtk-module 
+   87  sudo yum install libcanberra-gtk-module:i386
+   88  ls
+   89  cd lab4
+   90  ls
+   91  cd scripts/
+   92  ls
+   93  example1.sh
+   94  touch example1.sh
+   95  vim example1.sh 
+   96  touch num_of_files
+   97  vim num_of_files 
+   98  ls
+   99  rm num_of_files 
+  100  vim example1.sh 
+  101  bash example1.sh 
+  102  vim example1.sh 
+  103  ls
+  104  cd oss
+  105  ls
+  106  cd ..
+  107  cd Рабочий\ стол/
+  108  ls
+  109  cd ..
+  110  ls
+  111  cd oss
+  112  ls
+  113  mkdir lab4
+  114  ls
+  115  cd lab4
+  116  ls
+  117  ls -l /dev/sda{,[123]}
+  118  lsblk
+  119  cat /proc/diskstats
+  120  cat /proc/devices 
+  121  dd if=/dev/zero of=./fs.img bs=1M count=10
+  122  losetup --find --show ./fs.img
+  123  losetup --list
+  124  mkfs -t ext4 /dev/loop0
+  125  sudo losetup --find --show ./fs.img
+  126  losetup --list
+  127  sudo mkfs -t ext4 /dev/loop0
+  128  sudo blkid /dev/loop0
+  129  sudo mount /dev/loop0 /mnt
+  130  sudo mount | grep /mnt
+  131  df -hi /mnt
+  132  sudo umount /dev/loop0
+  133  sudo tune2fs -l /dev/loop0
+  134  sudo losetup --detach /dev/loop0
+  135  sudo losetup --list
+  136  losetup --list
+  137  history > history.txt
