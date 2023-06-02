@@ -1,0 +1,22 @@
+    1  id
+    2  pwd
+    3  touch file1
+    4  auditctl -D
+    5  sudo auditctl -D
+    6  sudo auditctl -w /home/user1/file1 -p war -k user1_file1
+    7  auditctl -l
+    8  sudo auditctl -l
+    9  echo 'Hello, world!' > file1
+   10  cat file1
+   11  chmod 600 file1 
+   12  aureport --file -ts today -i --summary
+   13  sudo aureport --file -ts today -i --summary
+   14  sudo aureport --file -ts recent
+   15  sudo ausearch -a 13053
+   16   # aureport
+   17  aureport
+   18  sudo aureport
+   19  sudo aureport --auth -ts recent
+   20  sudo aureport --user -ts recent -i
+   21  sudo ausearch --uid 1001 -ts recent
+   22  history>history.txt
